@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QQ Style Imitator</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>QQ Style</h1>
+        <p>聊天风格学习与模仿</p>
+      </div>
+      <nav>
+        <a class="nav-item active" data-page="dashboard" onclick="switchPage('dashboard')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          仪表盘
+        </a>
+        <a class="nav-item" data-page="profiles" onclick="switchPage('profiles')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          用户档案
+        </a>
+        <a class="nav-item" data-page="prompts" onclick="switchPage('prompts')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Prompt管理
+        </a>
+        <a class="nav-item" data-page="config" onclick="switchPage('config')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          系统配置
+        </a>
+        <a class="nav-item" data-page="preview" onclick="switchPage('preview')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          Prompt预览
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard Page -->
+      <div id="page-dashboard" class="page">
+        <div class="page-header">
+          <h2>仪表盘</h2>
+          <p>QQ用户聊天风格学习与模仿系统</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-profiles">0</div>
+            <div class="stat-label">用户档案</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-status">--</div>
+            <div class="stat-label">SnowLuma状态</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">B</div>
+            <div class="stat-label">方案类型</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">1.0</div>
+            <div class="stat-label">系统版本</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">快速开始</span>
+          </div>
+          <div class="code-block"># 1. 配置SnowLuma连接
+npm run collect -- --group 群号 --user 目标QQ号
+
+# 2. 分析生成Profile
+npm run analyze -- --user 目标QQ号
+
+# 3. 测试模仿
+npm run test -- --user 目标QQ号 --message "你好"
+
+# 4. 在OpenClaw中使用
+查看 config/openclaw.example.json</div>
+        </div>
+      </div>
+
+      <!-- Profiles Page -->
+      <div id="page-profiles" class="page" style="display:none">
+        <div class="page-header">
+          <h2>用户档案</h2>
+          <p>管理已分析的用户聊天风格档案</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">档案列表</span>
+            <button class="btn btn-primary btn-sm" onclick="refreshProfiles()">刷新</button>
+          </div>
+          <div id="profiles-list"></div>
+        </div>
+        <div class="card" id="profile-detail" style="display:none">
+          <div class="card-header">
+            <span class="card-title">档案详情</span>
+            <button class="btn btn-secondary btn-sm" onclick="closeProfileDetail()">关闭</button>
+          </div>
+          <div id="profile-content"></div>
+        </div>
+      </div>
+
+      <!-- Prompts Page -->
+      <div id="page-prompts" class="page" style="display:none">
+        <div class="page-header">
+          <h2>Prompt管理</h2>
+          <p>查看和编辑系统Prompt</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Prompt列表</span>
+            <button class="btn btn-primary btn-sm" onclick="refreshPrompts()">刷新</button>
+          </div>
+          <div id="prompts-list"></div>
+        </div>
+        <div class="card" id="prompt-editor" style="display:none">
+          <div class="card-header">
+            <span class="card-title">编辑: <span id="prompt-name"></span></span>
+            <div>
+              <button class="btn btn-secondary btn-sm" onclick="closePromptEditor()">取消</button>
+              <button class="btn btn-primary btn-sm" onclick="savePrompt()">保存</button>
+            </div>
+          </div>
+          <textarea id="prompt-content" class="form-textarea" style="min-height:400px"></textarea>
+        </div>
+      </div>
+
+      <!-- Config Page -->
+      <div id="page-config" class="page" style="display:none">
+        <div class="page-header">
+          <h2>系统配置</h2>
+          <p>配置SnowLuma连接和LLM设置</p>
+        </div>
+        <form id="config-form">
+          <div class="card">
+            <div class="card-title" style="margin-bottom:20px">SnowLuma 连接</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">WebSocket地址</label>
+                <input type="text" class="form-input" id="cfg-wsUrl" placeholder="ws://127.0.0.1:3001/">
+                <div class="form-hint">SnowLuma的OneBot WebSocket监听地址</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Access Token</label>
+                <input type="password" class="form-input" id="cfg-accessToken" placeholder="留空则无鉴权">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">机器人QQ号 (selfId)</label>
+              <input type="text" class="form-input" id="cfg-selfId" placeholder="可选，用于@触发判断">
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="margin-bottom:20px">LLM 配置</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Provider</label>
+                <select class="form-select" id="cfg-provider">
+                  <option value="openai">OpenAI</option>
+                  <option value="anthropic">Anthropic</option>
+                  <option value="ollama">Ollama (本地)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Model</label>
+                <input type="text" class="form-input" id="cfg-model" placeholder="gpt-4o-mini">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">API Key</label>
+                <input type="password" class="form-input" id="cfg-apiKey" placeholder="sk-...">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Base URL</label>
+                <input type="text" class="form-input" id="cfg-baseUrl" placeholder="https://api.openai.com/v1">
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title" style="margin-bottom:20px">采集设置</div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">默认采集消息数</label>
+                <input type="number" class="form-input" id="cfg-messageCount" value="200">
+              </div>
+              <div class="form-group">
+                <label class="form-label">分析最小消息数</label>
+                <input type="number" class="form-input" id="cfg-minMessages" value="50">
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;justify-content:flex-end">
+            <button type="button" class="btn btn-secondary" onclick="loadConfig()">重置</button>
+            <button type="submit" class="btn btn-primary">保存配置</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Preview Page -->
+      <div id="page-preview" class="page" style="display:none">
+        <div class="page-header">
+          <h2>Prompt预览</h2>
+          <p>预览生成的模仿Prompt</p>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">选择用户</span>
+          </div>
+          <div class="form-group">
+            <select class="form-select" id="preview-user" onchange="loadPreviewProfile()">
+              <option value="">-- 选择已分析的用户 --</option>
+            </select>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">模拟对话</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label">输入测试消息</label>
+            <input type="text" class="form-input" id="preview-message" placeholder="你好啊">
+          </div>
+          <button class="btn btn-primary" onclick="generatePreview()">生成Prompt</button>
+        </div>
+        <div class="card" id="preview-result" style="display:none">
+          <div class="card-header">
+            <span class="card-title">生成的Prompt</span>
+            <button class="btn btn-secondary btn-sm" onclick="copyPrompt()">复制</button>
+          </div>
+          <div id="preview-prompt" class="code-block"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

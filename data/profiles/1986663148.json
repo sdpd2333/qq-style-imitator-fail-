@@ -1,0 +1,374 @@
+{
+  "stats": {
+    "totalMessages": 275,
+    "avgLength": 8,
+    "medianLength": 4,
+    "emojiHabits": [
+      {
+        "emoji": "[图片]",
+        "count": 104
+      },
+      {
+        "emoji": "[json]",
+        "count": 2
+      },
+      {
+        "emoji": "[视频]",
+        "count": 2
+      },
+      {
+        "emoji": "[表情:78]",
+        "count": 2
+      },
+      {
+        "emoji": "[表情:338]",
+        "count": 1
+      },
+      {
+        "emoji": "😋",
+        "count": 1
+      },
+      {
+        "emoji": "[表情:480]",
+        "count": 1
+      },
+      {
+        "emoji": "[表情:27]",
+        "count": 1
+      },
+      {
+        "emoji": "[表情:479]",
+        "count": 1
+      },
+      {
+        "emoji": "[已脱敏]",
+        "count": 1
+      }
+    ],
+    "punctuationHabits": {
+      "exclamation": 0,
+      "question": 8,
+      "ellipsis": 0,
+      "dots": 0,
+      "comma": 46,
+      "noPunctuation": 267,
+      "trailingPunctuation": {
+        "？？": 1,
+        "？": 6
+      }
+    },
+    "replyPatterns": {
+      "avgGapSeconds": 32,
+      "fastReplyCount": 177,
+      "totalPairs": 241,
+      "avgResponseSeconds": null,
+      "responsePairs": 0
+    },
+    "topWords": [
+      {
+        "word": "图片",
+        "count": 104
+      },
+      {
+        "word": "还有",
+        "count": 6
+      },
+      {
+        "word": "表情",
+        "count": 5
+      },
+      {
+        "word": "沃雅",
+        "count": 4
+      },
+      {
+        "word": "这种",
+        "count": 4
+      },
+      {
+        "word": "那就",
+        "count": 4
+      },
+      {
+        "word": "沃雅妮",
+        "count": 3
+      },
+      {
+        "word": "雅妮莎",
+        "count": 3
+      },
+      {
+        "word": "所以",
+        "count": 3
+      },
+      {
+        "word": "怎么",
+        "count": 3
+      },
+      {
+        "word": "都有",
+        "count": 3
+      },
+      {
+        "word": "雅妮",
+        "count": 3
+      },
+      {
+        "word": "妮莎",
+        "count": 3
+      },
+      {
+        "word": "有多",
+        "count": 3
+      },
+      {
+        "word": "不太",
+        "count": 3
+      },
+      {
+        "word": "不能",
+        "count": 3
+      },
+      {
+        "word": "确实",
+        "count": 3
+      },
+      {
+        "word": "那还",
+        "count": 3
+      },
+      {
+        "word": "视频",
+        "count": 3
+      },
+      {
+        "word": "牛逼",
+        "count": 3
+      }
+    ],
+    "phraseHabits": [
+      {
+        "phrase": "图片",
+        "count": 104
+      },
+      {
+        "phrase": "还有",
+        "count": 6
+      },
+      {
+        "phrase": "表情",
+        "count": 5
+      },
+      {
+        "phrase": "沃雅",
+        "count": 4
+      },
+      {
+        "phrase": "这种",
+        "count": 4
+      },
+      {
+        "phrase": "那就",
+        "count": 4
+      },
+      {
+        "phrase": "沃雅妮莎",
+        "count": 3
+      },
+      {
+        "phrase": "沃雅妮",
+        "count": 3
+      },
+      {
+        "phrase": "雅妮莎",
+        "count": 3
+      },
+      {
+        "phrase": "所以",
+        "count": 3
+      },
+      {
+        "phrase": "怎么",
+        "count": 3
+      },
+      {
+        "phrase": "都有",
+        "count": 3
+      },
+      {
+        "phrase": "雅妮",
+        "count": 3
+      },
+      {
+        "phrase": "妮莎",
+        "count": 3
+      },
+      {
+        "phrase": "有多",
+        "count": 3
+      },
+      {
+        "phrase": "不太",
+        "count": 3
+      },
+      {
+        "phrase": "不能",
+        "count": 3
+      },
+      {
+        "phrase": "确实",
+        "count": 3
+      },
+      {
+        "phrase": "那还",
+        "count": 3
+      },
+      {
+        "phrase": "视频",
+        "count": 3
+      }
+    ],
+    "timeDistribution": {
+      "hours": [
+        48,
+        2,
+        45,
+        0,
+        6,
+        0,
+        2,
+        2,
+        1,
+        0,
+        5,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        19,
+        8,
+        59,
+        28,
+        44,
+        2
+      ],
+      "peakHour": 20
+    },
+    "sentenceStyle": {
+      "short": 232,
+      "medium": 42,
+      "long": 1,
+      "multiLine": 1
+    },
+    "dialogueActs": {
+      "question": 8,
+      "agreement": 3,
+      "disagreement": 6,
+      "joke": 0,
+      "empathy": 1,
+      "explanation": 3,
+      "statement": 255
+    },
+    "sampleWindow": {
+      "from": "2026-09-12T04:10:33.000Z",
+      "to": "2026-09-13T13:51:14.000Z"
+    }
+  },
+  "catchphrases": [
+    "图片",
+    "还有",
+    "表情",
+    "沃雅",
+    "这种"
+  ],
+  "topWords": [
+    {
+      "word": "图片",
+      "count": 104
+    },
+    {
+      "word": "还有",
+      "count": 6
+    },
+    {
+      "word": "表情",
+      "count": 5
+    },
+    {
+      "word": "沃雅",
+      "count": 4
+    },
+    {
+      "word": "这种",
+      "count": 4
+    },
+    {
+      "word": "那就",
+      "count": 4
+    },
+    {
+      "word": "沃雅妮",
+      "count": 3
+    },
+    {
+      "word": "雅妮莎",
+      "count": 3
+    },
+    {
+      "word": "所以",
+      "count": 3
+    },
+    {
+      "word": "怎么",
+      "count": 3
+    },
+    {
+      "word": "都有",
+      "count": 3
+    },
+    {
+      "word": "雅妮",
+      "count": 3
+    },
+    {
+      "word": "妮莎",
+      "count": 3
+    },
+    {
+      "word": "有多",
+      "count": 3
+    },
+    {
+      "word": "不太",
+      "count": 3
+    },
+    {
+      "word": "不能",
+      "count": 3
+    },
+    {
+      "word": "确实",
+      "count": 3
+    },
+    {
+      "word": "那还",
+      "count": 3
+    },
+    {
+      "word": "视频",
+      "count": 3
+    },
+    {
+      "word": "牛逼",
+      "count": 3
+    }
+  ],
+  "emoji_style": "[图片] [json] [视频] [表情:78] [表情:338]",
+  "sentence_pattern": "短句232条，中句42条，长句1条",
+  "tone": "自然",
+  "targetQQ": "1986663148",
+  "updatedAt": "2026-09-13T13:59:58.297Z"
+}

@@ -1,0 +1,43 @@
+{
+  "snowluma": {
+    "wsUrl": "ws://127.0.0.1:3001/",
+    "accessToken": "",
+    "selfId": ""
+  },
+  "llm": {
+    "provider": "openai",
+    "apiKey": "",
+    "model": "gpt-4o-mini",
+    "baseUrl": "https://api.openai.com/v1"
+  },
+  "collection": {
+    "messageCount": 200,
+    "saveRaw": false
+  },
+  "memorial": {
+    "id": "memorial-example",
+    "name": "纪念账号（AI，非本人）",
+    "subjectQQ": "目标QQ号",
+    "groupIds": ["目标群号"],
+    "identityDisclosure": "这是纪念账号生成的回复，不代表本人。",
+    "authorizationStatus": "pending",
+    "runtimeEnabled": false,
+    "participationEnabled": false,
+    "participationMode": "mention_only"
+  },
+  "runtime": {
+    "enabled": false,
+    "participationMode": "mention_only",
+    "minIntervalMs": 60000,
+    "maxPerHour": 8,
+    "maxConsecutive": 2
+  },
+  "governance": {
+    "dataRetentionDays": 30,
+    "allowRawStorage": false
+  },
+  "analysis": {
+    "minMessages": 50,
+    "contextWindowSize": 20
+  }
+}

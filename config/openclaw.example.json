@@ -1,0 +1,32 @@
+{
+  "$schema": "https://opencode.ai/schema/openclaw.json",
+  "agents": {
+    "style-imitator": {
+      "model": "gpt-4o-mini",
+      "systemPrompt": "你是一个QQ群聊风格模仿Agent。根据提供的用户风格档案，模仿指定用户的说话风格进行回复。保持自然、符合群聊语境。",
+      "tools": ["snowluma_get_history", "snowluma_get_group_members"],
+      "temperature": 0.8
+    }
+  },
+  "channels": {
+    "snowluma": {
+      "accounts": {
+        "default": {
+          "wsUrl": "ws://127.0.0.1:3001/",
+          "selfId": "机器人QQ号"
+        }
+      },
+      "receive": {
+        "mention": {
+          "enabled": true,
+          "requireMentionInGroup": true
+        }
+      }
+    }
+  },
+  "plugins": {
+    "openclaw-snowluma": {
+      "enabled": true
+    }
+  }
+}
